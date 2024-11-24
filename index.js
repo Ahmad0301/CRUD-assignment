@@ -14,19 +14,23 @@ const books = [
   { id: 1, title: 'Sample Book', author: 'Author Name', year: 2022 }
 ];
 
-app.get('/post', (req, res) => {
+app.get('/login', (req, res) => {
   res.send(books);
+  console.log(req.query);
+  console.log(req.body);
+  console.log(req.params);
+  console.log(req.headers);
 });
 
 app.post('/post', (req, res) => {
   res.send('Book added ');
 });
 
-app.put('/post', (req, res) => {
+app.put('/put', (req, res) => {
   res.send('Book updated');
 });
 
-app.delete('/post', (req, res) => {
+app.delete('/delet', (req, res) => {
   res.send('Book deleted');
 });
 
